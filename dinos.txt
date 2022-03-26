@@ -1,0 +1,16 @@
+#DDL
+CREATE DATABASE dinos
+CREATE RETENTION POLICY threeday ON dinos DURATION 3d REPLICATION 1
+#DML
+#CONTEXT-DATABASE:dinos
+#CONTEXT-RETENTION-POLICY:threeday
+fossils,dino_id=allosaurus value=70 1542146660
+fossils,dino_id=brontosaurus value=107 1542146661
+fossils,dino_id=tricepterops value=38 1542146662
+fossils,dino_id=velociraptor value=40 1542146663
+fossils,dino_id=pterodon value=31 1542146668
+fossils,dino_id=stegosaurus value=80 1542146670
+fossils,dino_id=brontosaurus value=29 1542146671
+fossils,dino_id=trex value=38 1542146672
+fossils,dino_id=velociraptor value=47 1542146673
+fossils,dino_id=pterodon value=33 1542146674

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">	
+        	
+		<title>FrontEnd</title>		 
+        <script type="text/javascript" src="paho-mqtt.js" ></script>
+        <script type="text/javascript" src="MQTTbrowserConn&PubForHive.js"></script>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+	
+    <body class = wrapper>	
+       <button id="connect" class="buttonDesign" onclick="connectToBroker()">Connect</button> 
+		<button id="Disconnect" class="buttonDesign" onclick="disconnectToBroker()" disabled>Disconnect</button>
+       
+         
+        <form id="myForm"> 
+        <a class ="headingDesign"><br>Topic of interest</br></a>
+		<input id="topicSubscribe" type="text" name="topicSubscribe" value="">
+		<br></br>
+		<input id="buttonSub" type="button"  onclick="subscribedToBroker()" value="Subscribed"disabled>
+		<a class ="headingDesign"><br class ="headingDesign">Message<br></a>
+		<input id="topicMessage" type="text" name="topicMessage" value="" >
+		<br></br>
+		<input id="buttonPub" type="button"  onclick="publishedToBroker()" value="Publish" disabled>
+		<br></br>
+		</form>
+		<div>
+		<div><a class ="headingDesign">Led Controller</a><div>
+		<button id = "LedOn" onclick="publishedOnLed()"  disabled  ><img src="GreedLed.png"></button >
+		<button id = "LedOff" onclick="publishedOffLed()" disabled ><img src="RedLed.png"></button>
+		</div>
+        <div id="messages"></div>
+    </body>
+</html>
